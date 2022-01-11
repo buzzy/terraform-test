@@ -1,4 +1,4 @@
-resource "test" "web" {
+resource "null_resource" "test" {
 
   provisioner "local-exec" {
     command = "env >> /tmp/env.txt"
