@@ -1,5 +1,5 @@
 steps:
-- uses: Scalr/scalr-action@v1
+- uses: Scalr/scalr-action@dev
   with:
     scalr_hostname: 'example.scalr.io'
     scalr_token: ${{ secrets.SCALR_TOKEN }}
