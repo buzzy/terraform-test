@@ -1,6 +1,9 @@
-resource "null_resource" "test" {
+output "test_var" {
+  value       = "hejsan"
+  description = "The private IP address of the main server instance."
+}
 
-  provisioner "local-exec" {
-    command = "env >> /tmp/env.txt"
-  }
+output "test_var2" {
+  value       = "hejsan2"
+  description = "The private IP address of the main server instance."
 }
