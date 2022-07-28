@@ -7,23 +7,28 @@ on:
   workflow_dispatch:
 
 jobs:
-  steps:
-  - uses: Scalr/scalr-action@dev
-    with:
-      scalr_hostname: 'example.scalr.io'
-      scalr_token: ${{ secrets.SCALR_TOKEN }}
-      terraform_version: 1.2.0
+  build:
+    name: Build
+    runs-on: 'ubuntu-latest'
 
-  - run: terraform init
+    steps:
+    - uses: Scalr/scalr-action@dev
+      with:
+        scalr_hostname: 'example.scalr.io'
+        scalr_token: ${{ secrets.SCALR_TOKEN }}
+        terraform_version: 1.2.0
+        terraform_output: true
+  
+    - run: terraform init
 
-  - id: plan
-    run: terraform plan
+    - id: plan
+      run: terraform plan
 
-  - run: echo ${{ steps.plan.outputs.stdout }}
-  - run: echo ${{ steps.plan.outputs.stderr }}
-  - run: echo ${{ steps.plan.outputs.exitcode }}
+    - run: echo ${{ steps.plan.outputs.stdout }}
+    - run: echo ${{ steps.plan.outputs.stderr }}
+    - run: echo ${{ steps.plan.outputs.exitcode }}
 
-  - id: apply
-    run: terraform apply -auto-approve
+    - id: apply
+      run: terraform apply -auto-approve
 
-  - run: echo ${{ steps.apply.outputs.vars.test_var }}
+    - run: echo ${{ steps.apply.outputs.vars.test_var }}
