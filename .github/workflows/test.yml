@@ -31,4 +31,4 @@ jobs:
       - id: apply
         run: terraform apply -auto-approve
 
-      - run: echo ${{ steps.apply.outputs.vars.test_var }}
+      - run: echo ${{ steps.apply.outputs.test_var }}
