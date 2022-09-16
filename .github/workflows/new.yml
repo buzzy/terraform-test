@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Scalr/scalr-action@95820a1
+      - uses: Scalr/scalr-action@95820a1f2c03110d5853da554ba72ffda0974355
         with:
           scalr_hostname: 'example.scalr.io'
           scalr_token: "xxx"
