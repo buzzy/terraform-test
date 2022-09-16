@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: buzzy/scalr-action@v1
+      - uses: Scalr/scalr-action@95820a1
         with:
           scalr_hostname: 'example.scalr.io'
           scalr_token: "xxx"
