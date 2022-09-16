@@ -1,0 +1,19 @@
+name: Test Wrapper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: buzzy/scalr-action@v1
+        with:
+          scalr_hostname: 'example.scalr.io'
+          scalr_token: "xxx"
+          terraform_version: 1.2.0
+  
+      - run: terraform-bin init
