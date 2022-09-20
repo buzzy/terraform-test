@@ -13,7 +13,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - uses: buzzy/scalr-action@v0.3.0
+      - uses: buzzy/scalr-action@v0.4.0
         with:
           scalr_hostname: 'example.scalr.io'
           scalr_token: "xxx"
