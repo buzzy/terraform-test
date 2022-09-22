@@ -1,4 +1,4 @@
-name: Test Wrapper
+name: Test Scalr CLI
 
 on:
   workflow_dispatch:
@@ -10,11 +10,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: buzzy/scalr-action@aacbdc37df7cc183fa0ba5064386383b66d096a6
+      - uses: buzzy/scalr-action@v0.5.0
         with:
           scalr_hostname: 'example.scalr.io'
           scalr_token: "xxx"
           terraform_version: 1.2.0
           terraform_wrapper: false
   
-      - run: terraform init
+      - run: scalr
