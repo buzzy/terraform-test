@@ -15,7 +15,6 @@ jobs:
           scalr_hostname: 'daniele.scalr.io'
           scalr_token: ${{ secrets.SCALR_TOKEN }}
           scalr_workspace: ws-u7f44t3oldrj7r0
-          terraform_version: 1.2.3
           terraform_wrapper: false
   
       - run: scalr -version
