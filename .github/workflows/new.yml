@@ -14,6 +14,7 @@ jobs:
         with:
           scalr_hostname: 'daniele.scalr.io'
           scalr_token: ${{ secrets.SCALR_TOKEN }}
+          scalr_workspace: xxx
           terraform_wrapper: false
   
       - run: scalr -version
