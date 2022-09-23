@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: buzzy/scalr-action@v0.8.0
+      - uses: buzzy/scalr-action@v0.9.0
         with:
           scalr_hostname: 'daniele.scalr.io'
           scalr_token: ${{ secrets.SCALR_TOKEN }}
