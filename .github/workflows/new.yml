@@ -10,11 +10,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: buzzy/scalr-action@v0.5.0
+      - uses: buzzy/scalr-action@v0.6.0
         with:
           scalr_hostname: 'example.scalr.io'
           scalr_token: "xxx"
-          terraform_version: 1.2.0
           terraform_wrapper: false
   
       - run: scalr -version
+      - run: terraform -version
