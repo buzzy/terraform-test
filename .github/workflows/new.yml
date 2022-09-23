@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Scalr/scalr-action@v1.3.0
+      - uses: Scalr/scalr-action@87303b7ab6db880acf45746cba22e219636b0403
         with:
           scalr_hostname: 'daniele.scalr.io'
           scalr_token: ${{ secrets.SCALR_TOKEN }}
